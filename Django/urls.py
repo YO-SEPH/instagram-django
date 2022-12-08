@@ -23,7 +23,7 @@ from user.views import Login, Join
 urlpatterns = [
     path('main/', Content.as_view()),
     path('', include('content.urls')),
-    path('', include('user.urls'))
+    path('user/', include('user.urls'))
 ]
 
 urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
