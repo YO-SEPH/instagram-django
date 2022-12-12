@@ -22,7 +22,7 @@ from user.views import Login, Join
 
 urlpatterns = [
     path('main/', Content.as_view()),
-    path('', include('content.urls')),
+    path('content/', include('content.urls')),
     path('user/', include('user.urls'))
 ]
 

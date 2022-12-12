@@ -433,24 +433,38 @@
     <body>
         <!-- 상단 내비게이션 바 -->
         <nav
-            class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
-            style="width: 100%;height: 50px;position: fixed;">
+                class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
+                style="width: 100%;height: 50px;position: fixed;">
             <div class="container">
                 <img
-                    style="height: 30px; object-fit: contain"
-                    src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png">
+                        style="height: 30px; object-fit: contain"
+                        src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png">
                 <input
-                    class="form-control"
-                    style="width: 200px"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search">
-                <div>
-                    <span class="material-icons">home</span>
-                    <span class="material-icons">send</span>
-                    <span id="add_feed" class="material-icons-outlined">add_box</span>
-                    <span class="material-icons-outlined">explore</span>
-                    <span class="material-icons-outlined">favorite_border</span>
+                        class="form-control"
+                        style="width: 200px"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search">
+
+                <div style="display: flex">
+                    <span class="material-icons" style="padding-right:10px">home</span>
+                    <span id="add_feed" class="material-icons-outlined"style="padding-right:10px">add_box</span>
+                    <span class="material-icons-outlined" style="padding-right:10px">favorite_border</span>
+
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div>
+                                <img class="profile_box" style="width: 25px; height: 25px;"
+                                 src="https://i.pinimg.com/736x/93/a6/8b/93a68b57a54e4bdc73d43d1d049b94b3.jpg">
+                            </div>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -527,10 +541,10 @@
                         </div>
                         <div class="name_content">
                             <span class="feed_name_txt">
-                                jin.99
+                                {{ user.nickname }}
                             </span>
                             <span class="name_content_txt">
-                                Moon Kyujin</span>
+                                {{ user.name }}</span>
                         </div>
                     </div>
 
