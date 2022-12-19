@@ -74,6 +74,15 @@
         width:780px;
         height: 548px;
         }
+
+        .underline {
+            text-decoration: underline 2px #004FF9;
+            transition: text-decoration-color 300ms;
+        }
+        .underline :hover {
+            text-decoration-color: #FFF94C;
+        }
+
     </style>
 </head>
 <body>
@@ -133,20 +142,20 @@
         </div>
 
         <div style="margin-bottom: 20px">
-            게시물 내 게시물건수  팔로워 111 팔로잉 111
+            <span>게시물 {{ feed.count }}</span> 팔로워 111 팔로잉 111
         </div>
         <div>
             <b>{{ user.name }}</b>
         </div>
     </div>
-</div>
-
+</div> 0
 <div style="border-top: solid 2px rgba(50,50,50,0.1); width: 100%">
 
     <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin: 20px">
-        <div id="button_feed_list" style="cursor: pointer;margin: 0 30px;display: flex; flex-direction: row;align-items: center"><span class="material-icons-outlined">grid_on</span>내 게시물</div>
+        <div id="button_feed_list" style="cursor: pointer;margin: 0 30px;display: flex; flex-direction: row;align-items: center;" onclick="test()"><span class="material-icons-outlined">grid_on</span>내 게시물</div>
         <div id="button_feed_like_list" style="cursor: pointer;margin: 0 30px;display: flex; flex-direction: row;align-items: center"><span class="material-icons-outlined">favorite_border</span>좋아요</div>
         <div id="button_feed_bookmark_list" style="cursor: pointer;margin: 0 30px;display: flex; flex-direction: row;align-items: center"><span class="material-icons-outlined">bookmark_border</span>북마크</div>
+        </ul>
     </div>
 
 </div>
