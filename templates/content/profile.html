@@ -322,7 +322,6 @@
         let file = files[0];
         let image = files[0].name;
         let content = $('#input_feed_content').val();
-
         let fd = new FormData();
 
         fd.append('file', file);
@@ -348,7 +347,7 @@
         });
     });
 
-    $('.img_upload_space')
+    $('img_upload_space')
         .on("dragover", dragOver)
         .on("dragleave", dragOver)
         .on("drop", uploadFiles);
